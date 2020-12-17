@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage{epsf}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{braket}
+\usepackage{physics}
+
+\title{---}
+\author{---}
+
+\setlength{\oddsidemargin}{-0.5in}
+\setlength{\topmargin}{-0.6in}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\textheight}{10.3in}
+\setlength{\textwidth}{7.5in}
+\setlength{\topskip}{0cm}
+\setlength{\parskip}{4mm}
+\setlength{\parindent}{0cm}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\arraystretch}{1.15}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\dblfloatpagefraction}{0.99}
+\renewcommand{\floatpagefraction}{0.99}
+\renewcommand{\textfraction}{0.01}
+
+
+% numeric sets
+
+\newcommand{\Reals}{\mathbb{R}}      % real numbers
+\newcommand{\Naturals}{\mathbb{N}}   % natural numbers
+\newcommand{\Integers}{\mathbb{Z}}   % integer numbers
+\newcommand{\Rationals}{\mathbb{Q}}  % rational numbers
+\newcommand{\Complexes}{\mathbb{C}}  % complex numbers
+
+% math symbols
+
+\newcommand{\IFF}{\mbox{$\Longleftrightarrow$}}    % biimplication
+\newcommand{\THEN}{\mbox{$\Rightarrow$}}           % implication
+
+\pagestyle{empty}
+\begin{document}
+
+
+\begin{center}
+{\Large \bf December 17th, 2020 \hfill Winter 2020 \hfill Emin Okic }
+\end{center}
+
+
+\begin{center}
+{ \bf Linear Algebra Basics  }
+\end{center}
+
+\begin{text}
+Today we will cover exercise 2.1 from the Quantum Computation and Quantum Information book by Nielsen and Chuang. If you at any point would like to refer to their book, they provide great background prior to it from pages 60 to 63. 
+\end{text}
+
+%Exercise 2.1
+\section{Show that the set of pairs (1,-1, (1,2), and (2,1) are linearly dependent.}
+\begin{text}
+{\bf Objective: }
+We can show that the set of vector coordinates given above have linearly dependent properties if there exists a set of numbers to make the vector space equal to zero where some arbitrary $c_i \neq 0$. \\
+
+Matrix representation is an effective tool to approach and understand quantum mechanical problems later \\ discussed. \\
+We can define our vectors by their corresponding matrix as follows. \\
+
+Let $\ket{v_1} = \begin{bmatrix} 1 \\ -1\end{bmatrix}$, $\ket{v_2} = \begin{bmatrix} 1 \\ 2\end{bmatrix}$, and $\ket{v} = 
+\begin{bmatrix} 2 \\ 1\end{bmatrix}$ be their corresponding matrix representations.\\
+
+As we stated earlier, if we can show there exists a a vector coordinate that is composed of the other two vector coordinates then the set displays linearly dependent properties. \\
+Let's construct our resulting coefficient matrix to test the linear dependence of the given set of vectors as follows. \\
+
+$\begin{bmatrix} 1 & 1 & 2 \mid 0\\ -1 & 2 & 1 \mid 0 \end{bmatrix}$ \\
+
+If there exists a homogeneous matrix representation of the matrix we just constructed using only the three elementary row operations (add, multiply, and scale) then the original matrix has linearly dependent vector space properties. We define these properties to be the properties of some object the same way as an apple's color has the property "red". We can show the steps taken as follow: \\
+
+{\bf continue on...} \\
+
+\newpage
+
+{\bf Row Operation 1:} Add 1 times row 1 to the 2nd row to get the $x_1$ out of the 2nd row.  \\
+{\bf Matrix Representation following Step 1: }\\
+
+$\begin{bmatrix} 1 & 1 & 2\\ 0 & 3 & 3 \end{bmatrix}$ \\
+
+{\bf Row Operation 2:} Multiply row 2 by the coefficient $\frac{1}{3}$  \\
+{\bf Matrix Representation following Step 2: }\\
+
+$\begin{bmatrix} 1 & 1 & 2\\ 0 & 1 & 1 \end{bmatrix}$
+\\
+
+{\bf Row Operation 3:} Multiply -1 times row 2 to row 1\\
+{\bf Matrix Representation following Step 3: }\\
+
+$\begin{bmatrix} 1 & 0 & 1\\ 0 & 1 & 1 \end{bmatrix}$ which is homogeneous. \\
+
+By a homogeneous matrix, we main a basic identity matrix composed of 1's and 0s results in the constant terms $c_1 = 1$, and $c_2 = 1$. which are not equal two zero thus satisfying our given conditional. \\
+
+Hence, we see that these matrices can form an respective identity matrix if composed of two of the three vector spaces while satisfying the condition that some constant term $c_i \neq 0$ \\
+
+Therefore, there does exist some combination of the vector spaces that will result some other a corresponding vector space in the given set. \\
+
+{\bf Concluding Exercise 2.1. }
+\end{text}
+
+\vfill
+\end{document}
